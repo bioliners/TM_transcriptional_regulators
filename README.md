@@ -1,4 +1,4 @@
-## TM_transcriptional_regulators
+## TTRs
 
 The folder contains scripts and data used to identify and analyze transmembrane transcriptional regulators (TTRs).
 
