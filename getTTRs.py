@@ -10,8 +10,8 @@ ssl._create_default_https_context = ssl._create_unverified_context
 dna_binding_domains = 'Arc	MetJ	Omega_Repress	PSK_trans_fac	RHH_1	RHH_3	RHH_4	RHH_7	AphA_like	Arg_repressor	BetR	Cro	Crp	FaeA	Fe_dep_repress	FeoC	FUR	GcrA	GerE	GntR	HrcA_DNA-bdg	HSF_DNA-bind	HTH_1	HTH_10	HTH_11	HTH_12	HTH_13	HTH_15	HTH_17	HTH_18	HTH_19	HTH_20	HTH_21	HTH_22	HTH_23	HTH_24	HTH_25	HTH_26	HTH_27	HTH_28	HTH_29	HTH_3	HTH_30	HTH_31	HTH_32	HTH_33	HTH_34	HTH_35	HTH_36	HTH_37	HTH_38	HTH_39	HTH_40	HTH_41	HTH_43	HTH_45	HTH_46	HTH_47	HTH_5	HTH_6	HTH_7	HTH_8	HTH_AraC	HTH_AsnC-type	HTH_CodY	HTH_Crp_2	HTH_DeoR	HTH_IclR	HTH_Mga	HTH_WhiA	HxlR	KORA	KorB	LacI	LexA_DNA_bind	MarR	MarR_2	MerR	MerR-DNA-bind	MerR_1	MerR_2	Mga	Mor	PaaX	PadR	Pencillinase_R	Phage_CI_repr	PuR_N	Put_DNA-bind_N	RepL	Rrf2	SgrR_N	Sigma70_r2	Sigma70_r3	Sigma70_r4	Sigma70_r4_2	TetR_N	Trans_reg_C	TrmB	Trp_repressor	UPF0122	Vir_act_alpha_C	ArsD	ComK	CtsR	LytTR	ROS_MUCR	DNA_PPF'.split()
 
 representative_genomes = []
-#bac120_metadata_r202.tsv
-with open("ar122_metadata_r202.tsv") as f1:
+#bac120_metadata_r202_rep.tsv
+with open("ar122_metadata_r202_rep.tsv") as f1:
 	for line in f1:
 		if "representative genome" in line:
 			if line.split()[0][5] == 'F':
