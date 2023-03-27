@@ -8,5 +8,5 @@ The repository contains scripts and data used to identify and analyze transmembr
 
 **getTTR_st_statistics.py** - get TTR and other signal transduction protein counts.
 
-**TTR_TM_surface_area.py** - calculate the surface area of transmembrane regions.
+**TTR_TM_surface_area.py** - calculate the length and surface area of transmembrane regions.
 
