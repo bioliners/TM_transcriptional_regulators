@@ -1,6 +1,6 @@
 ## TTRs
 
-The repository contains scripts and data used to identify and analyze transmembrane transcriptional regulators (TTRs).
+The repository contains scripts and data used to identify and analyze transmembrane transcription regulators (TTRs).
 
 **getTTRs.py** - get TTRs from MiST using its API.
 
