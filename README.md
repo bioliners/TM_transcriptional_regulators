@@ -10,3 +10,7 @@ The repository contains scripts and data used to identify and analyze transmembr
 
 **TTR_TM_surface_area.py** - calculate the length and surface area of transmembrane regions.
 
+Publication: Demey, L.M.#, Gumerov, V.M.#, Xing, J., Zhulin, I.B, DiRita, V.J. Transmembrane Transcription Regulators are widespread in Bacteria and Archaea. *Microbiology Spectrum*
+
+\# - co-first author with equal contribution
+
