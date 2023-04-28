@@ -29,7 +29,7 @@ with open(INPUT_FILE) as inputFile:
 			
 		while True:
 			try:
-				conn = http.client.HTTPSConnection("api.mistdb.com")
+				conn = http.client.HTTPSConnection("mib-jouline-db.asc.ohio-state.edu")
 				conn.request("GET", "/v1/genomes/" + genomeId + "/stp-matrix?per_page=1")
 				res = conn.getresponse()
 				html = res.read().decode("utf-8")

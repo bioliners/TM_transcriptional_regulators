@@ -15,25 +15,24 @@ LOG_FILE = "MLTF_tm_regions_log.txt"
 
 recordCounter = 0
 with open(INPUT_FILE) as f1:
-	for line in f1:	
+	for line in f1:
 		splittedLine = line.split("\t")
 		if len(splittedLine) <= 1:
 			continue
 		genomeId = splittedLine[0]
 		proteinId = splittedLine[1]
-		
 		recordCounter+=1
-		print (recordCounter)		
+		print (recordCounter)
 		print (genomeId)
 		with open(LOG_FILE, 'a') as logFile:
 			logFile.write(str(recordCounter) + "\n" + genomeId + "\n")
 		while True:
 			try:
-				conn = http.client.HTTPSConnection("api.mistdb.com")
+				conn = http.client.HTTPSConnection("mib-jouline-db.asc.ohio-state.edu")
 				conn.request("GET", "/v1/genomes/" + genomeId + "/genes?search=" + proteinId + "&fields.Aseq=tmhmm2,sequence")
 				res = conn.getresponse()
 				html = res.read().decode("utf-8")
-				# ~ url = 'https://api.mistdb.com/v1/genomes/' + genome + '/genes?fields.Aseq=pfam31,sequence,tmhmm2&page=' + str(i) + '&per_page=100'
+				# ~ url = 'https://mib-jouline-db.asc.ohio-state.edu/v1/genomes/' + genome + '/genes?fields.Aseq=pfam31,sequence,tmhmm2&page=' + str(i) + '&per_page=100'
 				# ~ html = urllib.request.urlopen(url).read().decode("utf-8")
 				if html == '[]':
 					break
@@ -67,8 +66,9 @@ with open(INPUT_FILE) as f1:
 							tmFile.write(">" + genomeId + "|" + proteinId + "|" + tmCoords + "\n" + tmRegion + "\n")
 					with open(TM_REGIONS_COORDINATES_FILE, 'a') as tmCoordFile:
 						tmCoordFile.write(genomeId + "\t" + proteinId + "\t" + tmmCoordsStr + "\n")
-			break		
+			break
 		
+
 
 
 

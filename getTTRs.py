@@ -73,11 +73,11 @@ for genome in representative_genomes:
 	for i in range(1, 101):
 		while True:
 			try:
-				conn = http.client.HTTPSConnection("api.mistdb.com")
+				conn = http.client.HTTPSConnection("mib-jouline-db.asc.ohio-state.edu")
 				conn.request("GET", "/v1/genomes/" + genome + "/genes?fields.Aseq=pfam31,sequence,tmhmm2&page=" + str(i) + "&per_page=100")
 				res = conn.getresponse()
 				html = res.read().decode("utf-8")
-				# ~ url = 'https://api.mistdb.com/v1/genomes/' + genome + '/genes?fields.Aseq=pfam31,sequence,tmhmm2&page=' + str(i) + '&per_page=100'
+				# ~ url = 'https://mib-jouline-db.asc.ohio-state.edu/v1/genomes/' + genome + '/genes?fields.Aseq=pfam31,sequence,tmhmm2&page=' + str(i) + '&per_page=100'
 				# ~ html = urllib.request.urlopen(url).read().decode("utf-8")
 				if html == '[]':
 					break
